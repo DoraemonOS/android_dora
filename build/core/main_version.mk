@@ -20,8 +20,8 @@ endif
 
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
-    org.pixelexperience.version=$(DORA_VERSION_PROP) \
-    org.pixelexperience.version.display=$(DORA_VERSION) \
-    org.pixelexperience.build_date=$(DORA_BUILD_DATE) \
-    org.pixelexperience.build_date_utc=$(DORA_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(DORA_BUILD_TYPE)
+    org.doraemon.version=$(DORA_VERSION_PROP) \
+    org.doraemon.version.display=$(DORA_VERSION) \
+    org.doraemon.build_date=$(DORA_BUILD_DATE) \
+    org.doraemon.build_date_utc=$(DORA_BUILD_DATE_UTC) \
+    org.doraemon.build_type=$(DORA_BUILD_TYPE)

@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 
 # Copy all dora init rc files
 PRODUCT_COPY_FILES += \
-    vendor/dora/prebuilt/common/etc/init/init.pixelexperience-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.pixelexperience-updater.rc
+    vendor/dora/prebuilt/common/etc/init/init.doraemon-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.doraemon-updater.rc
 
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
