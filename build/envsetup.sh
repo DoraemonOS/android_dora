@@ -7,7 +7,7 @@ Additional functions:
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
 - pixelgerrit:     A Git wrapper that fetches/pushes patch from/to PixelExperience Gerrit Review.
 - pixelrebase:     Rebase a Gerrit change and push it again.
-- aospremote:      Add git remote for matching AOSP repository.
+- doraremote:      Add git remote for matching dora repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
 - githubremote:    Add git remote for PixelExperience Github.
 - mka:             Builds using SCHED_BATCH on all processors.
@@ -81,7 +81,7 @@ function breakfast()
                 variant="userdebug"
             fi
 
-            lunch aosp_$target-$variant
+            lunch dora_$target-$variant
         fi
     fi
     return $?
@@ -230,14 +230,14 @@ function dddclient()
    fi
 }
 
-function aospremote()
+function doraremote()
 {
     if ! git rev-parse --git-dir &> /dev/null
     then
         echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
         return 1
     fi
-    git remote rm aosp 2> /dev/null
+    git remote rm dora 2> /dev/null
     local PROJECT=$(pwd -P | sed -e "s#$ANDROID_BUILD_TOP\/##; s#-caf.*##; s#\/default##")
     # Google moved the repo location in Oreo
     if [ $PROJECT = "build/make" ]
@@ -248,8 +248,8 @@ function aospremote()
     then
         local PFX="platform/"
     fi
-    git remote add aosp https://android.googlesource.com/$PFX$PROJECT
-    echo "Remote 'aosp' created"
+    git remote add dora https://android.googlesource.com/$PFX$PROJECT
+    echo "Remote 'dora' created"
 }
 
 function cafremote()
@@ -862,7 +862,7 @@ alias cmkap='dopush cmka'
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/aosp/build/tools/repopick.py $@
+    $T/vendor/dora/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {

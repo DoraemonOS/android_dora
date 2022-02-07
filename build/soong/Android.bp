@@ -2,7 +2,7 @@
 
 bootstrap_go_package {
     name: "soong-dora-generator",
-    pkgPath: "aosp/soong/generator",
+    pkgPath: "dora/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",

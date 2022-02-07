@@ -12,8 +12,8 @@ endif
 ADDITIONAL_SYSTEM_PROPERTIES  += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
 
-# AOSP recovery flashing
-ifeq ($(TARGET_USES_AOSP_RECOVERY),true)
+# DoraemonOS recovery flashing
+ifeq ($(TARGET_USES_DORA_RECOVERY),true)
 ADDITIONAL_SYSTEM_PROPERTIES  += \
     persist.sys.recovery_update=true
 endif
