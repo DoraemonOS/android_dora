@@ -25,35 +25,35 @@ def main(argv):
 
     if len(argv) == 3:
         output_file_path = argv[1]
-        custom_override_file = argv[2]
+        dora_override_file = argv[2]
     else:
         raise ValueError("Wrong number of arguments %s" % len(argv))
 
-    custom_apn_names = []
-    with open(custom_override_file, 'r') as f:
+    dora_apn_names = []
+    with open(dora_override_file, 'r') as f:
         for line in f:
             xmltree = parseString(line)
             carrier = xmltree.getElementsByTagName('apn')[0].getAttribute('carrier')
-            custom_apn_names.append('"' + carrier + '"')
+            dora_apn_names.append('"' + carrier + '"')
 
     with open(original_file, 'r') as input_file:
         with open(output_file_path, 'w') as output_file:
             for line in input_file:
                 writeOriginalLine = True
-                for apn in custom_apn_names:
+                for apn in dora_apn_names:
                     if apn in line:
-                        with open(custom_override_file, 'r') as custom_file:
-                            for override_line in custom_file:
+                        with open(dora_override_file, 'r') as dora_file:
+                            for override_line in dora_file:
                                 if apn in override_line:
                                     output_file.write(override_line)
                                     writeOriginalLine = False
-                                    custom_apn_names.remove(apn)
+                                    dora_apn_names.remove(apn)
                 if writeOriginalLine:
                     if "</apns>" in line:
-                        if custom_apn_names:
-                            for apn in custom_apn_names:
-                                with open(custom_override_file, 'r') as custom_file:
-                                    for override_line in custom_file:
+                        if dora_apn_names:
+                            for apn in dora_apn_names:
+                                with open(dora_override_file, 'r') as dora_file:
+                                    for override_line in dora_file:
                                         if apn in override_line:
                                             output_file.write(override_line)
                     output_file.write(line)

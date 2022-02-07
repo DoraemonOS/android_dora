@@ -4,9 +4,9 @@ ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 include vendor/aosp/config/BoardConfigQcom.mk
 endif
 
-# Custom AVB Key
-ifneq ($(filter OFFICIAL CI,$(CUSTOM_BUILD_TYPE)),)
-ifeq ($(TARGET_USES_CUSTOM_AVB_KEY),true)
+# DoraemonOS AVB Key
+ifneq ($(filter OFFICIAL CI,$(DORA_BUILD_TYPE)),)
+ifeq ($(TARGET_USES_DORA_AVB_KEY),true)
 include vendor/aosp/config/BoardConfigAvb.mk
 endif
 endif
