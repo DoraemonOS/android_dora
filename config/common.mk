@@ -84,6 +84,9 @@ PRODUCT_PACKAGES += \
     mkfs.ntfs \
     mount.ntfs
 
+# Inherit from themes config
+$(call inherit-product, vendor/dora/config/themes.mk)
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
