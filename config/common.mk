@@ -194,6 +194,9 @@ TARGET_SUPPORTS_QUICK_TAP ?= false
 #    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
 #endif
 
+# Lawnchair Vendor
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+
 # Audio
 $(call inherit-product, vendor/dora/config/audio.mk)
 
