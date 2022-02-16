@@ -20,8 +20,8 @@ endif
 
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
-    org.doraemon.version=$(DORA_VERSION_PROP) \
-    org.doraemon.version.display=$(DORA_VERSION) \
-    org.doraemon.build_date=$(DORA_BUILD_DATE) \
-    org.doraemon.build_date_utc=$(DORA_BUILD_DATE_UTC) \
-    org.doraemon.build_type=$(DORA_BUILD_TYPE)
+    ro.doraemon.version=$(DORAUI_VERSION) \
+    ro.doraemon.version.display=$(DORA_VERSION) \
+    ro.doraemon.build_date=$(DORA_BUILD_DATE) \
+    ro.doraemon.build_date_utc=$(DORA_BUILD_DATE_UTC) \
+    ro.doraemon.build_type=$(DORA_BUILD_TYPE)
