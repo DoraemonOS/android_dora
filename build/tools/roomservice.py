@@ -45,8 +45,8 @@ DEBUG = False
 dora_local_manifest = ".repo/local_manifests/dora.xml"
 dora_default_revision =  os.getenv('ROOMSERVICE_DEFAULT_BRANCH', '12')
 dora_dependencies = "dora.dependencies"
-org_manifest = "dora-devices"  # leave empty if org is provided in manifest
-org_display = "DoraemonOS-Devices"  # needed for displaying
+org_manifest = "Dora"  # leave empty if org is provided in manifest
+org_display = "DoraemonOS"  # needed for displaying
 
 github_auth = None
 
