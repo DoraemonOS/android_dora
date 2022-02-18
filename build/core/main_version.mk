@@ -21,6 +21,7 @@ endif
 # Versioning props
 ADDITIONAL_SYSTEM_PROPERTIES  += \
     ro.doraemon.version=$(DORAUI_VERSION) \
+    ro.doraemon.maintainer=$(DORA_MAINTAINER) \
     ro.doraemon.version.display=$(DORA_VERSION) \
     ro.doraemon.build_date=$(DORA_BUILD_DATE) \
     ro.doraemon.build_date_utc=$(DORA_BUILD_DATE_UTC) \
