@@ -40,6 +40,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/dora/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/dora/config/permissions/privapp-permissions-dora-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-dora-system_ext.xml \
+
 # Copy all dora init rc files
 PRODUCT_COPY_FILES += \
     vendor/dora/prebuilt/common/etc/init/init.doraemon-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.doraemon-updater.rc
