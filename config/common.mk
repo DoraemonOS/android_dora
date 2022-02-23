@@ -199,6 +199,9 @@ TARGET_SUPPORTS_QUICK_TAP ?= false
 # Lawnchair Vendor
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
 
+# Lawnicons Vendor
+$(call inherit-product-if-exists, vendor/lawnicons/overlay.mk)
+
 # Audio
 $(call inherit-product, vendor/dora/config/audio.mk)
 
