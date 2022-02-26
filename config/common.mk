@@ -122,6 +122,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
 
+# Updater
+PRODUCT_PACKAGES += \
+    Updater
+
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet
